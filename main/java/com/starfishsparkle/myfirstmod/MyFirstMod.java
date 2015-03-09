@@ -4,6 +4,7 @@ package com.starfishsparkle.myfirstmod;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -24,7 +25,16 @@ public class MyFirstMod
     public static ModMetadata meta;
     
     public static Block myFirstBlock;
-    public static Item myFirstItem; 
+    public static Item myFirstItem;
+    public static CreativeTabs randomTab = new CreativeTabs("pink + black") {
+
+		@Override
+		public Item getTabIconItem() {
+			
+			return Items.baked_potato;
+		}
+    	
+    };
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
