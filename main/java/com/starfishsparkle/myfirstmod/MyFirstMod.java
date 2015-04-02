@@ -42,13 +42,15 @@ public class MyFirstMod
     	// blockode
     	myFirstBlock = new MyFirstBlock()
     		.setBlockName("My First Block")
-    		.setCreativeTab(CreativeTabs.tabBlock);
+    		.setCreativeTab(CreativeTabs.tabBlock)
+    		.setCreativeTab(randomTab);
     	GameRegistry.registerBlock(myFirstBlock, "My First Block");
     	
     	// Itemkode 
     	myFirstItem = new Item()
     		.setUnlocalizedName(ITEM_NAME)
-    		.setCreativeTab(CreativeTabs.tabMisc);
+    		.setCreativeTab(CreativeTabs.tabMisc)
+    		.setCreativeTab(randomTab);
     	GameRegistry.registerItem(myFirstItem, ITEM_NAME);
     }
     

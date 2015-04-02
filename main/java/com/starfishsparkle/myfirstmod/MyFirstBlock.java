@@ -6,7 +6,7 @@ import net.minecraft.block.material.Material;
 public class MyFirstBlock extends Block {
 
 	protected MyFirstBlock() {
-		super(Material.grass);
+		super(Material.portal);
 	}
 
 }
