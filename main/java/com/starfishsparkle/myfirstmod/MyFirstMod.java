@@ -6,6 +6,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Metadata;
@@ -52,7 +53,19 @@ public class MyFirstMod
     		.setCreativeTab(CreativeTabs.tabMisc)
     		.setCreativeTab(randomTab);
     	GameRegistry.registerItem(myFirstItem, ITEM_NAME);
+    	
+    	//recikode
+    	GameRegistry.addRecipe(new ItemStack(Items.saddle), new Object[]
+    			{
+    		"pop",
+    		"pee",
+    		"poo",
+    		'p', myFirstBlock,
+    		'o', Blocks.diamond_block,
+    		'e', Items.leather
+    			});
     }
+    
     
     @EventHandler
     public void init(FMLInitializationEvent event)
