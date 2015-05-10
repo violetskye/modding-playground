@@ -15,7 +15,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = MyFirstMod.MODID, version = MyFirstMod.VERSION)
+@Mod(modid = MyFirstMod.MODID, name="sparkly", version = MyFirstMod.VERSION)
 public class MyFirstMod
 {
     public static final String MODID = "My Sparkly Mod";
@@ -44,14 +44,16 @@ public class MyFirstMod
     	myFirstBlock = new MyFirstBlock()
     		.setBlockName("My First Block")
     		.setCreativeTab(CreativeTabs.tabBlock)
-    		.setCreativeTab(randomTab);
+    		.setCreativeTab(randomTab)
+    		.setBlockTextureName("myfirstmod:stripey");
     	GameRegistry.registerBlock(myFirstBlock, "My First Block");
     	
     	// Itemkode 
     	myFirstItem = new Item()
     		.setUnlocalizedName(ITEM_NAME)
     		.setCreativeTab(CreativeTabs.tabMisc)
-    		.setCreativeTab(randomTab);
+    		.setCreativeTab(randomTab)
+    		.setTextureName("myfirstmod:pinkies_trident_of_parties");
     	GameRegistry.registerItem(myFirstItem, ITEM_NAME);
     	
     	//recikode
@@ -64,7 +66,17 @@ public class MyFirstMod
     		'o', Blocks.diamond_block,
     		'e', Items.leather
     			});
+    	GameRegistry.addRecipe(new ItemStack(myFirstBlock), new Object[]
+    			{
+    		"pop",
+    		"pee",
+    		"poo",
+    		'p', Items.redstone,
+    		'o', Blocks.acacia_stairs,
+    		'e', Items.writable_book
+    			});
     }
+    
     
     
     @EventHandler
