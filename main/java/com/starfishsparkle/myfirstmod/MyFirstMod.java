@@ -75,6 +75,9 @@ public class MyFirstMod
     		'o', Blocks.acacia_stairs,
     		'e', Items.writable_book
     			});
+    	
+    	//smeltkode
+    	GameRegistry.addSmelting(Items.redstone, new ItemStack(Items.repeater, 1), 20.0F);
     }
     
     
