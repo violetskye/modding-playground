@@ -2,6 +2,7 @@ package com.starfishsparkle.myfirstmod;
 
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -25,8 +26,13 @@ public class MyFirstMod
     @Metadata
     public static ModMetadata meta;
     
+    //blocky
     public static Block myFirstBlock;
+    public static Block godlyOre;
+    
+    //item–wha?
     public static Item myFirstItem;
+    
     public static CreativeTabs randomTab = new CreativeTabs("pink + black") {
 
 		@Override
@@ -46,7 +52,13 @@ public class MyFirstMod
     		.setCreativeTab(CreativeTabs.tabBlock)
     		.setCreativeTab(randomTab)
     		.setBlockTextureName("myfirstmod:stripey");
-    	GameRegistry.registerBlock(myFirstBlock, "My First Block");
+    	GameRegistry.registerBlock(myFirstBlock, "My First  Block");
+    	
+    	godlyOre = new GodlyOre(16, Material.glass)
+    		.setHardness(1.0F)
+    		.setBlockName("Godly Ore")
+    		.setBlockTextureName("myfirstmod:purple_ore");
+    	GameRegistry.registerBlock(godlyOre, "Godly Ore");
     	
     	// Itemkode 
     	myFirstItem = new Item()
